@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Image Upload</title>
+    <link rel="stylesheet" href="fileU.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Image</h1>
+        <div class="upload-area" id="uploadArea">
+            <p>Drag & Drop your image here or click to upload</p>
+            <input type="file" id="fileInput" accept="image/*">
+            <img id="previewImage" src="" alt="" class="hidden">
+        </div>
+        <div id="imageInfo" class="hidden">
+            <p><strong>Image Name:</strong> <span id="imageName"></span></p>
+            <p><strong>Image Size:</strong> <span id="imageSize"></span></p>
+        </div>
+        
+    </div>
+
+    <script src="fileU.js"></script>
+</body>
+</html>
