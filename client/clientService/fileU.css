@@ -1,0 +1,208 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+/* Body Styling */
+body {
+    background-color: #c9d6ff;
+    background: linear-gradient(to left, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 60px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Title Styling */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Upload Area Styling */
+.upload-area {
+    position: relative;
+    padding: 40px;
+    border: 2px dashed #a82d2d;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.upload-area:hover {
+    background-color: #e6f2ff;
+    border-color: #0056b3;
+}
+
+.upload-area p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.upload-area input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Preview Image Styling */
+.upload-area img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-area img.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Image Info Section */
+#imageInfo {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#imageInfo p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .upload-area {
+        padding: 30px;
+    }
+
+    .upload-area p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .upload-area {
+        padding: 20px;
+    }
+
+    .upload-area p {
+        font-size: 0.9rem;
+    }
+
+    #imageInfo {
+        padding: 10px;
+    }
+}
+
+/* Button Hover Animation (optional) */
+.upload-area:hover::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    z-index: -1;
+    opacity: 0.6;
+}
+button {
+    display: inline-block;
+    background-color: #a24a4a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #a82d2d;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Success and Error Message Styling */
+#message {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: green;
+}
+
+/* Hidden Element Styling */
+.hidden {
+    display: none;
+}
+
+/* Responsive Submit Button for Small Screens */
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
