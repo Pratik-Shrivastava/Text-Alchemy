@@ -1,0 +1,8 @@
+os-sys
+opencv-python
+random2
+numpy
+pandas
+matplotlib
+tensorflow
+keras
