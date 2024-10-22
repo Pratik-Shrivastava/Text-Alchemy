@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS role (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    description TEXT
+);
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+	role_id INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT now(),
+    updated_at TIMESTAMP,
+    FOREIGN KEY (role_id) REFERENCES role (id) ON DELETE CASCADE
+);
+
