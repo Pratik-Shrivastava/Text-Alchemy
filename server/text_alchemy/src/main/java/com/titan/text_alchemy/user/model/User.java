@@ -1,8 +1,7 @@
 package com.titan.text_alchemy.user.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,14 +14,15 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Setter
 @Getter
+@Table(name = "users")
 public class User {
 
     @Id
-    private Long id;
+    private String email;
+    private Long roleId;
     private String firstName;
     private String lastName;
-    private String username;
-    private String email;
+
     private boolean active;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
